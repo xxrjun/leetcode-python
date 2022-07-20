@@ -1,35 +1,29 @@
 # 116. Populating Next Right Pointers in Each Node
 
+"""
 # Definition for a Node.
-
-from asyncio.windows_events import NULL
-
-
 class Node:
     def __init__(self, val: int = 0, left: 'Node' = None, right: 'Node' = None, next: 'Node' = None):
         self.val = val
         self.left = left
         self.right = right
         self.next = next
+"""
+
+# Idea:
+#       1. 使用 Preorder
 
 
 class Solution:
     def connect(self, root: 'Optional[Node]') -> 'Optional[Node]':
-        if not root:
-            return []
+        if not root or not root.left:
+            return root
 
-        treeList = []
-        index = 1
-        while root:
-            if root.right.val == 2 * index + 1:
-                root.next = Node(None)
-            else:
-                root.left.next = root.right
+        root.left.next = root.right
+        if root.next:
+            root.right.next = root.next.left
 
-        return treeList
+        self.connect(root.left)
+        self.connect(root.right)
 
-    def preorderTraversal(self, root: 'Optional[Node]', index) -> 'Optional[Node]':
-        if not root:
-            return []
-
-        return root + self.preorderTraversal(root.left) + self.preorderTraversal(root.right)
+        return root
