@@ -1,15 +1,4 @@
-# 21. Merge Two Sorted Lists
-
-# Definition for singly-linked list.
-# class ListNode:
-
-#     def __init__(self, val=0, next=None):
-#         self.val = val
-#         self.next = next
-
-
 class Solution:
-    # Solution 1
     def mergeTwoLists(self, list1: Optional[ListNode],
                       list2: Optional[ListNode]) -> Optional[ListNode]:
         head1, head2 = list1, list2
@@ -36,7 +25,9 @@ class Solution:
                 cur = cur.next
                 cur2 = cur2.next
 
-        if cur1: cur.next = cur1
-        if cur2: cur.next = cur2
+        if cur1:
+            cur.next = cur1
+        if cur2:
+            cur.next = cur2
 
         return returnHead.next
