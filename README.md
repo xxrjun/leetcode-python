@@ -5,7 +5,7 @@ Start from 2022/07/11.
 # Study Plan
 
 
-| Study Plan       	| Start At 	| Update   	| Days          | Done 	|
-|------------------	|----------	|----------	|--------------	|------	|
-| Date Structure I 	| 22/07/11 	| 22/07/20 	| **_13 / 14_** |      	|
-| Algorithm I      	| 22/07/13 	| 22/07/20 	| **_11 / 14_** |      	|
+| Study Plan       | Start At | Update   | Day           | Done               |
+| ---------------- | -------- | -------- | ------------- | ------------------ |
+| Date Structure I | 22/07/11 | 22/07/18 | **_14 / 14_** | :white_check_mark: |
+| Algorithm I      | 22/07/13 | 22/07/17 | **_12 / 14_** |                    |
