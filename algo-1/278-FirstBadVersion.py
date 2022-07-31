@@ -4,19 +4,21 @@
 # Idea:
 #     1. 搭配 binary search
 
+
 class Solution:
+
     def firstBadVersion(self, n: int) -> int:
         left = 0
         right = n
         returnFisrBadVersion = n
 
         while left <= right:
-          mid = (left + right) // 2
-          if isBadVersion(mid):
-            if mid < returnFisrBadVersion:
-              returnFisrBadVersion = mid
-            right = mid - 1
-          elif:
-            left = mid + 1
+            mid = (left + right) // 2
+            if isBadVersion(mid):
+                if mid < returnFisrBadVersion:
+                    returnFisrBadVersion = mid
+                right = mid - 1
+            else:
+                left = mid + 1
 
         return returnFisrBadVersion
