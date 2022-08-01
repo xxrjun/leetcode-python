@@ -20,27 +20,27 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
+        k = k % len(nums)
+
         self.reverseArray(nums, 0, len(nums) - 1)
         self.reverseArray(nums, 0, k - 1)
         self.reverseArray(nums, k, len(nums) - 1)
-        
-        
+
     # Helper function for Solution 1: Reverse Function
     def reverseArray(self, arr: List[int], startIndex: int, endIndex: int):
         left = startIndex
         right = endIndex
         while left <= right:
-          self.swap(arr, left, right)
-          left += 1
-          right -= 1
-
+            self.swap(arr, left, right)
+            left += 1
+            right -= 1
 
     # Helper funcetion for Solution 1: Swap Function
     def swap(self, arr: List[int], index1: int, index2: int):
         temp = arr[index1]
         arr[index1] = arr[index2]
         arr[index2] = temp
-    
+
     # Solution 2. List Slicing
     # def rotate(self, nums: List[int], k: int) -> None:
     #     """
