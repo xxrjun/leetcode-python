@@ -1,5 +1,7 @@
 # Solution 1 (Faster)
 class Solution:
+
+    # Solution 1 (Faster)
     def lengthOfLongestSubstring(self, s: str) -> int:
         seen = ''
         maxLength = 0
@@ -15,7 +17,6 @@ class Solution:
         return max(maxLength, len(seen))
 
     # Solution 2 (Naive, Very Slow, O(n)): Nested for loop
-
     def lengthOfLongestSubstring(self, s: str) -> int:
 
         if len(s) == 1:
