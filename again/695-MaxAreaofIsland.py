@@ -2,40 +2,34 @@
 
 class Solution:
     def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
+        returnMaxArea = 0
 
-        returnMaxValue = 0     # Initialize the max value of area of island
+        for row in range(len(grid)):
+            for col in range(len(grid[row])):
+                if grid[row][col] == 1:
+                    returnMaxArea = max(returnMaxArea, self.dfs(
+                        grid, row, col))
 
-        for i in range(len(grid)):
-            for j in range(len(grid[i])):
-                # encounter island
-                if grid[i][j] == 1:
-                    # update maxumum value
-                    returnMaxValue = max(returnMaxValue, self.dfs(grid, i, j))
+        return returnMaxArea
 
+    def dfs(self, grid: List[List[int]], row: int, col: int) -> int:
 
-        return returnMaxValue
-
-    
-    def dfs(self, grid: List[List[int]], i: int, j: int) -> int:
-
-        # out of bound
-        if i >= len(grid) or i < 0 or j >= len(grid[i]) or j < 0:
-            return 0
-        
-        # encounter water
-        if grid[i][j] == 0:
+        # Check bound
+        if row >= len(grid) or row < 0 or col >= len(grid[row]) or col < 0:
             return 0
 
-        
-        grid[i][j] = 0  # set the area we encoutered to 0
+        # Stop when encounter 0
+        if grid[row][col] == 0:
+            return 0
+
+        # Set 1 to 0 after we count it
+        grid[row][col] = 0
+
         count = 1
 
-        # traverse 4 direction
-        count += self.dfs(grid, i + 1, j)
-        count += self.dfs(grid, i - 1, j)
-        count += self.dfs(grid, i, j + 1)
-        count += self.dfs(grid, i, j - 1)
-
+        count += self.dfs(grid, row + 1, col)
+        count += self.dfs(grid, row - 1, col)
+        count += self.dfs(grid, row, col + 1)
+        count += self.dfs(grid, row, col - 1)
 
         return count
-
