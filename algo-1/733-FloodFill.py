@@ -6,30 +6,28 @@ class Solution:
 
         # # starting pixel is already colored with given color,
         # # so no changes are made to the image.
-        # if originalCenterColor == color:
-        #     return image
-
+        if originalCenterColor == color:
+            return image
 
         self.dfs(image, sr, sc, originalCenterColor, color)
-
 
         return image
 
     # helper function: dfs
-    def dfs(self, image: List[List[int]], i: int, j: int, originalCenterColor: int, color: int):
+    def dfs(self, image: List[List[int]], row: int, col: int, originalCenterColor: int, color: int):
         # out of bound
-        if i >= len(image) or i < 0 or j >=len(image[i]) or j < 0:
-            return 
+        if row >= len(image) or row < 0 or col >= len(image[row]) or col < 0:
+            return
 
         # Pixel's color is not the same as starting pixel's
-        if image[i][j] != originalCenterColor:
-            return 
-            
+        if image[row][col] != originalCenterColor:
+            return
+
         # Draw color
-        image[i][j] = color
+        image[row][col] = color
 
         # Traverse 4 directions
-        self.dfs(image, i + 1, j, originalCenterColor, color)
-        self.dfs(image, i - 1, j, originalCenterColor, color)
-        self.dfs(image, i, j + 1, originalCenterColor, color)
-        self.dfs(image, i, j - 1, originalCenterColor, color)
+        self.dfs(image, row + 1, col, originalCenterColor, color)
+        self.dfs(image, row - 1, col, originalCenterColor, color)
+        self.dfs(image, row, col + 1, originalCenterColor, color)
+        self.dfs(image, row, col - 1, originalCenterColor, color)
