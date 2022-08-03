@@ -2,34 +2,31 @@
 
 class Solution:
     def floodFill(self, image: List[List[int]], sr: int, sc: int, color: int) -> List[List[int]]:
-        originalCenterColor = image[sr][sc]
+        startPixelColor = image[sr][sc]
 
-        # # starting pixel is already colored with given color,
-        # # so no changes are made to the image.
-        # if originalCenterColor == color:
-        #     return image
-
-
-        self.dfs(image, sr, sc, originalCenterColor, color)
-
+        self.dfs(image, sr, sc, color, startPixelColor)
 
         return image
 
-    # helper function: dfs
-    def dfs(self, image: List[List[int]], i: int, j: int, originalCenterColor: int, color: int):
-        # out of bound
-        if i >= len(image) or i < 0 or j >=len(image[i]) or j < 0:
-            return 
+    def dfs(self, image: List[List[int]], row: int, col: int, color: int, startPixelColor: int) -> None:
+        # check bound
+        if row >= len(image) or row < 0 or col >= len(image[0]) or col < 0:
+            return
 
-        # Pixel's color is not the same as starting pixel's
-        if image[i][j] != originalCenterColor:
-            return 
-            
+        if image[row][col] != startPixelColor:
+            return
+
         # Draw color
-        image[i][j] = color
+        image[row][col] = color
 
-        # Traverse 4 directions
-        self.dfs(image, i + 1, j, originalCenterColor, color)
-        self.dfs(image, i - 1, j, originalCenterColor, color)
-        self.dfs(image, i, j + 1, originalCenterColor, color)
-        self.dfs(image, i, j - 1, originalCenterColor, color)
+        # direction (row, col): right, left, down, up
+        dir = [[0, 1], [0, -1], [-1, 0], [1, 0]]
+
+        self.dfs(image, row + dir[0][0], col +
+                 dir[0][1], color, startPixelColor)
+        self.dfs(image, row + dir[1][0], col +
+                 dir[1][1], color, startPixelColor)
+        self.dfs(image, row + dir[2][0], col +
+                 dir[2][1], color, startPixelColor)
+        self.dfs(image, row + dir[3][0], col +
+                 dir[3][1], color, startPixelColor)
