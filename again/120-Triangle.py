@@ -2,21 +2,13 @@
 
 class Solution:
     def minimumTotal(self, triangle: List[List[int]]) -> int:
+        # 在原有三角形下面以一排 0 作為開始
+        dp = [0] * (len(triangle) + 1)
 
-        if len(triangle) < 1:
-            return triangle[0]
+        # 每列由下而上去算出最小總和
+        for row in triangle[::-1]:
+            for i, n in enumerate(row):
+                dp[i] = n + min(dp[i], dp[i + 1])
 
-        min_sum = triangle[0][0]
-        last_choosen_idx = 0
-        for i in range(1, len(triangle)):
-            choosen_idx = 0
-            if triangle[i][last_choosen_idx] > triangle[i][last_choosen_idx + 1]:
-                choosen_idx = last_choosen_idx + 1
-            else:
-                choosen_idx = last_choosen_idx
-
-            min_sum += triangle[i][choosen_idx]
-
-            last_choosen_idx = choosen_idx
-
-        return min_sum
+        # 最後的頂端就會是 minimum total
+        return dp[0]
