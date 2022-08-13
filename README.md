@@ -8,7 +8,7 @@ Start from 2022/07/11.
 | ------------------------------------------------------------------- | :------------------------------: | -------- | -------- | ------------- | ------------------ |
 | [Date Structure I](https://leetcode.com/study-plan/data-structure/) |      [:link: link](./ds-1/)      | 22/07/11 | 22/07/18 | **_14 / 14_** | :white_check_mark: |
 | [Algorithm I](https://leetcode.com/study-plan/algorithm/)           |     [:link: link](./algo-1/)     | 22/07/28 | 22/08/10 | **_14 / 14_** | :white_check_mark: |
-| [Binary Search I](https://leetcode.com/study-plan/binary-search/)   | [:link: link](./binarysearch-1/) | 22/08/11 | 22/08/12 | **_2 / 14_**  |                    |
+| [Binary Search I](https://leetcode.com/study-plan/binary-search/)   | [:link: link](./binarysearch-1/) | 22/08/11 | 22/08/13 | **_3 / 14_**  |                    |
 
 ## Resources
 
