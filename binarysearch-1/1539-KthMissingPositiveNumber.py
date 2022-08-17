@@ -26,3 +26,30 @@ class Solution:
                 right = mid - 1
 
         return left + k
+
+    # Solution 3: Brute Force and Easy understand
+    def findKthPositive(self, arr: List[int], k: int) -> int:
+        if arr[0] > k:
+            return k
+
+        # make array to set for better searching performance
+        arr_set = set(arr)
+
+        # iterate 1 to the last number in array
+        i = 1
+        while i < arr[len(arr) - 1]:
+            # if i is not in arr_set, it means i is a missing number
+            if i not in arr_set:
+                k -= 1
+
+            # find kth missing number when k is equal to 0
+            if k == 0:
+                return i
+
+            i += 1
+
+        while k > 0:
+            k -= 1
+            i += 1
+
+        return i
