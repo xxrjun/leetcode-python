@@ -8,7 +8,7 @@ Start from 2022/07/11.
 | ------------------------------------------------------------------- | :------------------------------: | -------- | -------- | ------------- | ------------------ |
 | [Date Structure I](https://leetcode.com/study-plan/data-structure/) |      [:link: link](./ds-1/)      | 22/07/11 | 22/07/18 | **_14 / 14_** | :white_check_mark: |
 | [Algorithm I](https://leetcode.com/study-plan/algorithm/)           |     [:link: link](./algo-1/)     | 22/07/28 | 22/08/10 | **_14 / 14_** | :white_check_mark: |
-| [Binary Search I](https://leetcode.com/study-plan/binary-search/)   | [:link: link](./binarysearch-1/) | 22/08/11 | 22/08/17 | **_ / 14_**   |                    |
+| [Binary Search I](https://leetcode.com/study-plan/binary-search/)   | [:link: link](./binarysearch-1/) | 22/08/11 | 22/08/17 | **_7/ 14_**   |                    |
 
 ## Resources
 
@@ -16,3 +16,7 @@ Start from 2022/07/11.
 | ---------------------------------------------------------- | :------: | -------------------- |
 | [NeetCode](https://www.youtube.com/c/NeetCode)             | English  | Python               |
 | [花花醬 Hua Hua](https://www.youtube.com/c/HuaHuaLeetCode) | Chinese  | C++                  |
+
+## All My Solutions
+
+[Solution Code in Python3](./solutions-python3/)
