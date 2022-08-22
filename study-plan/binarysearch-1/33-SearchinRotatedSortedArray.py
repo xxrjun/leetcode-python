@@ -16,14 +16,25 @@ class Solution:
 
             return -1
 
+        # return the index of minimum number in a list
+        def find_min_idx(nums: List[int]) -> int:
+            left, right = 0, len(nums) - 1
+            while left < right:
+                mid = left + (right - left) // 2
+                if nums[mid] > nums[right]:
+                    left = mid + 1
+                else:
+                    right = mid
+
+            return left
+
         # find the index of largest number in nums
-        largest_num_idx = len(nums) - 1
-        for i in range(len(nums) - 1):
-            if nums[i] > nums[i + 1]:
-                largest_num_idx = i
-                break
+        # O(logn)
+        min_idx = find_min_idx(nums)
+        largest_num_idx = min_idx - 1 if min_idx != 0 else len(nums) - 1
 
         # determine which side should be done with binary searcch
+        # O(logn)
         if target >= nums[0]:
             # doing bs in the left side
             return binary_search(nums, 0, largest_num_idx, target)
