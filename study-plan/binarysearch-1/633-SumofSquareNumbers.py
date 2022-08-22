@@ -1,7 +1,7 @@
 # 633. Sum of Square Numbers
 
 class Solution:
-    # Solution 1: Two Pointers
+    # Solution 1: Two Pointers, O(n)
     def judgeSquareSum(self, c: int) -> bool:
         end = int(c ** 0.5)
         p1, p2 = 0, end
@@ -17,7 +17,7 @@ class Solution:
 
         return False
 
-    # Solution 2: Binary Search (Pretty Slower)
+    # Solution 2: Binary Search (Pretty Slower, O(nlogn))
     def judgeSquareSum(self, c: int) -> bool:
 
         def binary_search(start: int, end: int, target: int) -> bool:
