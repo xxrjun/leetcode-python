@@ -1,4 +1,4 @@
-# LeetCode Python3
+# LeetCode Python
 
 Start from 2022/07/11.
 
@@ -20,7 +20,7 @@ Start from 2022/07/11.
 
 ## Problems & Solutions
 
-[Solution Code](./solutions-python3/)
+### [Solution Code in Python3](./solutions-python3/)
 
 | #    | Title                                                                                                                                             | Level  | Solution                                                                           | Category                             |
 | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ---------------------------------------------------------------------------------- | ------------------------------------ |
@@ -103,3 +103,19 @@ Start from 2022/07/11.
 | 1539 | Kth Missing Positive Number                                                                                                                       | Easy   | [python]()                                                                         | Array, Binary Search                 |
 | 1608 | Special Array With X Elements Greater Than or Equal X                                                                                             | Easy   | [python]()                                                                         | Array, Binary Search, Sorting        |
 | 1855 | [Maximum Distance Between a Pair of Values](https://leetcode.com/problems/maximum-distance-between-a-pair-of-values/)                             | Medium | [python](./solutions-python3/1855-MaximumDistanceBetweenaPairofValues.py)          | Array, Binary Search, Two Pointers   |
+
+### [Solution Code in MySQL](./solutions-mysql/)
+
+| #    | Title                                                                                             | Level | Solution                                                        | Category |
+| ---- | ------------------------------------------------------------------------------------------------- | ----- | --------------------------------------------------------------- | -------- |
+| 595  | [Big Countries](https://leetcode.com/problems/big-countries/)                                     | Easy  | [MySQL](./solutions-mysql/595-BigCountries.sql)                 | Database |
+| 1757 | [Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/) | Easy  | [MySQL](./solutions-mysql/1757-RecyclableandLowFatProducts.sql) | Database |
+|      |                                                                                                   |       |                                                                 |          |
+|      |                                                                                                   |       |                                                                 |          |
+|      |                                                                                                   |       |                                                                 |          |
+|      |                                                                                                   |       |                                                                 |          |
+|      |                                                                                                   |       |                                                                 |          |
+|      |                                                                                                   |       |                                                                 |          |
+|      |                                                                                                   |       |                                                                 |          |
+|      |                                                                                                   |       |                                                                 |          |
+|      |                                                                                                   |       |                                                                 |          |
