@@ -110,12 +110,3 @@ Start from 2022/07/11.
 | ---- | ------------------------------------------------------------------------------------------------- | ----- | --------------------------------------------------------------- | -------- |
 | 595  | [Big Countries](https://leetcode.com/problems/big-countries/)                                     | Easy  | [MySQL](./solutions-mysql/595-BigCountries.sql)                 | Database |
 | 1757 | [Recyclable and Low Fat Products](https://leetcode.com/problems/recyclable-and-low-fat-products/) | Easy  | [MySQL](./solutions-mysql/1757-RecyclableandLowFatProducts.sql) | Database |
-|      |                                                                                                   |       |                                                                 |          |
-|      |                                                                                                   |       |                                                                 |          |
-|      |                                                                                                   |       |                                                                 |          |
-|      |                                                                                                   |       |                                                                 |          |
-|      |                                                                                                   |       |                                                                 |          |
-|      |                                                                                                   |       |                                                                 |          |
-|      |                                                                                                   |       |                                                                 |          |
-|      |                                                                                                   |       |                                                                 |          |
-|      |                                                                                                   |       |                                                                 |          |
